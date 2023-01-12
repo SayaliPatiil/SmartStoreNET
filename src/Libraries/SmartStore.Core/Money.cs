@@ -25,6 +25,12 @@ namespace SmartStore
         public Money(decimal amount, Currency currency)
             : this(amount, currency, false)
         {
+        try
+            {
+                exc.StackTrace.Dump();
+                exc.Message.Dump();
+            }
+            catch { }
         }
 
         public Money(decimal amount, Currency currency, bool hideCurrency)
